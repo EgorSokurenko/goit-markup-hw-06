@@ -645,9 +645,9 @@ header .container {
   display: block;
   width: 24px;
   height: 24px;
-  background-color: yellowgreen;
   transition: transform 350ms var(--timing-function);
   margin-left: 10px;
+  fill:white;
 }
 
 .sign-but:active .but-icon-foot {
@@ -828,7 +828,9 @@ a {
   height: 18px;
   fill: black;
 }
-
+.close-icon:hover,.close-icon:focus{
+  fill: var(--link-color-hov);
+}
 .is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -932,6 +934,7 @@ a {
 .input-svg-block:focus-within>.modal-input {
   outline: none;
   border: 1px solid var(--link-color-hov);
+  
 }
 
 .input-svg-block:focus-within>.form-icon {
