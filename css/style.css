@@ -523,11 +523,10 @@ header .container {
 .content-foot {
   align-items: baseline;
   display: flex;
+  justify-content: space-between;
 }
 
-.info-footer {
-  margin-right: 70px;
-}
+
 
 .address {
   font-style: normal;
@@ -584,10 +583,12 @@ header .container {
   height: 20px;
   fill: #fff;
 }
-.footer-form{
+
+.footer-form {
   display: flex;
 }
-.input-mail-footer{
+
+.input-mail-footer {
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -595,9 +596,29 @@ header .container {
   border-radius: 4px;
   width: 358px;
   height: 50px;
+  background: none;
+  margin-right: 12px;
+  padding: 15px 16px 15px 16px;
+
+   font-family: var(--font);
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1.25;
+   letter-spacing: 0.03em;
+   color: rgba(255, 255, 255, 0.89)
 }
-.sign-but{
-  display:flex;
+
+.input-mail-footer::placeholder {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6)
+}
+
+.sign-but {
+  display: flex;
   align-items: center;
   background: var(--link-color-hov);
   font-family: var(--font);
@@ -611,14 +632,28 @@ header .container {
   color: #ffffff;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
   border-radius: 4px;
-  transition: all 600ms ease;
+  transition: transform 600ms var(--timing-function);
+  overflow: hidden;
   padding: 10px 30px 10px 30px;
 }
-.but-icon-foot{
+
+.sign-but:active {
+  transform: scale(0.9);
+}
+
+.but-icon-foot {
   display: block;
   width: 24px;
   height: 24px;
+  background-color: yellowgreen;
+  transition: transform 350ms var(--timing-function);
+  margin-left: 10px;
 }
+
+.sign-but:active .but-icon-foot {
+  transform: translate(200%, -200%);
+}
+
 /* PORTFOLIO */
 .catalog {
   padding: 94px 0px 94px 0px;
@@ -949,13 +984,14 @@ a {
   border-bottom: 1.5px solid var(--link-color-hov);
 }
 
-.order-but{
+.order-but {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  transition: transform 300ms var(--timing-function) ;
+  transition: transform 300ms var(--timing-function);
 }
-.order-but:active{
+
+.order-but:active {
 
   transform: scale(0.9);
 }
